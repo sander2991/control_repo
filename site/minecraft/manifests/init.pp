@@ -7,7 +7,7 @@ class minecraft (
   }
   file {"{$install_dir}/minecraft_server.jar":
     ensure => file,
-    source => $url
+    source => $url,
     before => Service['minecraft'],
   }
   file {'/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7':
